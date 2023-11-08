@@ -46,5 +46,35 @@ export default [
       commonjs(), // Convert CommonJS modules to ES6
       terser(), // Minify the output bundle
     ],
+  },
+  {
+    input: './node_modules/@nlpjs/basic/src/index.js', // Entry point of lang-en-min
+    output: {
+      file: './dist/basic.bundle.min.js', // Output file for lang-en-min bundle
+      format: 'iife', // Output format for the browser
+      name: 'nlpjs.basic', // Name to export to the browser window
+      exports: 'named',
+    },
+    plugins: [
+      resolve(), // Locate and bundle dependencies from node_modules
+      commonjs(), // Convert CommonJS modules to ES6
+      json(),
+      terser(), // Minify the output bundle
+    ],
+  },
+  {
+    input: './node_modules/@nlpjs/evaluator/src/index.js', // Entry point of lang-en-min
+    output: {
+      file: './dist/evaluator.bundle.min.js', // Output file for lang-en-min bundle
+      format: 'iife', // Output format for the browser
+      name: 'nlpjs.evaluator', // Name to export to the browser window
+      exports: 'named',
+    },
+    plugins: [
+      resolve(), // Locate and bundle dependencies from node_modules
+      commonjs(), // Convert CommonJS modules to ES6
+      json(),
+      terser(), // Minify the output bundle
+    ],
   }
 ];

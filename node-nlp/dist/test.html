@@ -7,10 +7,15 @@
   <script>
 
   (async () => {
-    const container = await nlpjs.Core.containerBootstrap();
+    //const container = await nlpjs.Core.containerBootstrap();
+    //container.use(nlpjs.Nlp.Nlp);
+    //container.use(nlpjs.LangEnMin);
+    //const nlp = container.get('nlp');
+    const container = new nlpjs.Core.Container();
     container.use(nlpjs.Nlp.Nlp);
-    container.use(nlpjs.LangEnMin);
+    window.container = container;
     const nlp = container.get('nlp');
+    //const nlp = new nlpjs.Nlp.Nlp();
     nlp.settings.autoSave = false;
     nlp.addLanguage('en');
     // Adds the utterances and intents for the NLP
@@ -33,7 +38,7 @@
     console.log(response);
   })();
   </script>
-</head>
+</head...>
 <body>
 </body>
 </html>
