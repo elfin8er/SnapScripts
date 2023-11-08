@@ -52,7 +52,7 @@ export default [
     output: {
       file: './dist/basic.bundle.min.js', // Output file for lang-en-min bundle
       format: 'iife', // Output format for the browser
-      name: 'nlpjs.basic', // Name to export to the browser window
+      name: 'nlpjs.Basic', // Name to export to the browser window
       exports: 'named',
     },
     plugins: [
@@ -67,7 +67,7 @@ export default [
     output: {
       file: './dist/evaluator.bundle.min.js', // Output file for lang-en-min bundle
       format: 'iife', // Output format for the browser
-      name: 'nlpjs.evaluator', // Name to export to the browser window
+      name: 'nlpjs.Evaluator', // Name to export to the browser window
       exports: 'named',
     },
     plugins: [
